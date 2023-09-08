@@ -104,6 +104,6 @@ build: gen/combined3.wasm
 run:
 	wasmtime --features=component-model ../../gen/combined3.wasm
 
-run:
+run_old:
 	cd ./wasmcon2023/runner/ && \
 	cargo run -- --component ../../gen/combined2.wasm
