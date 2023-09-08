@@ -98,7 +98,7 @@ gen/combined3.wasm: gen/combined2.wasm gen/combinedworld.componment.wasm
 	../wasm-tools-1.0.40-x86_64-linux/wasm-tools compose -o combined3.wasm ./combinedworld.componment.wasm -d ./combined2.wasm
 
 .PHONY: build
-build: gen/combined2.wasm gen/combinedworld.componment.wasm
+build: gen/combined3.wasm
 
 .PHONY: run
 run:
