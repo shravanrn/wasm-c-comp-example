@@ -1,0 +1,8 @@
+bootstrap
+*.tar.gz
+wasi-sdk-20.0
+wit-bindgen-v0.11.0-x86_64-linux
+wasmcon2023
+wasm-tools-1.0.40-x86_64-linux
+*.wasm
+gen
