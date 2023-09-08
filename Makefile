@@ -72,4 +72,4 @@ build: gen/combined2.wasm
 .PHONY: run
 run:
 	cd ./wasmcon2023/runner/ && \
-	cargo run -- --component ../../gen/combined.wasm
+	cargo run -- --component ../../gen/combined2.wasm
