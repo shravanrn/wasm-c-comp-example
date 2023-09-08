@@ -6,3 +6,4 @@ wasmcon2023
 wasm-tools-1.0.40-x86_64-linux
 *.wasm
 gen
+wit/deps

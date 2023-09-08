@@ -1,0 +1,20 @@
+package wasmcon2023:greet
+
+interface %interface {
+    greet: func() -> string
+}
+
+world greeter {
+    export %interface
+}
+
+world proxy-greeter {
+    export %interface
+    import %interface
+}
+
+world combinedworld {
+    import %interface
+    import wasi:cli/stdout
+    export wasi:cli/run
+}
