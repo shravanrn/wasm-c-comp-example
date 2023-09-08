@@ -37,7 +37,6 @@ bootstrap: wasm-tools-1.0.40-x86_64-linux wit-bindgen-v0.11.0-x86_64-linux wasi-
 		source ~/.cargo/env; \
 	fi
 	rustup update
-	cargo install wasmtime-cli --features=component-model --git https://github.com/bytecodealliance/wasmtime
 	cd wasmtime && cargo build --features=component-model --release
 	mkdir -p ./deps/cli
 	ln -s $(CURRPATH)/wasmtime/crates/wasi/wit/deps/ ./wit/deps
@@ -102,7 +101,7 @@ build: gen/combined3.wasm
 
 .PHONY: run
 run:
-	wasmtime --features=component-model ../../gen/combined3.wasm
+	wasmtime/target/release/wasmtime --wasm-features=component-model ./gen/combined3.wasm
 
 run_old:
 	cd ./wasmcon2023/runner/ && \
