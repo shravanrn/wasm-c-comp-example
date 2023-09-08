@@ -101,7 +101,7 @@ build: gen/combined3.wasm
 
 .PHONY: run
 run:
-	wasmtime/target/release/wasmtime --wasm-features=component-model ./gen/combined3.wasm && echo "\n"
+	wasmtime/target/release/wasmtime --wasm-features=component-model ./gen/combined3.wasm && echo ""
 
 run_old:
 	cd ./wasmcon2023/runner/ && \
